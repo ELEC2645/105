@@ -19,10 +19,14 @@ void read_into_array(Student array[], int n);
 void print_array(const Student array[], int n);
 
 int main() {
+  // count the number of lines in the CSV
   int n = count_lines();
   std::cout << n << " lines read." << std::endl;
+  // then create dynamic array of correct size
   Student *students = new Student[n];
+  // read the CSV file into the array
   read_into_array(students, n);
+  // and then print for debug purposes
   print_array(students, n);
 }
 
@@ -78,6 +82,7 @@ void read_into_array(Student array[], int n) {
 }
 
 void print_array(const Student array[], int n) {
+  // just loop through array and print to terminal
   for (int i = 0; i < n; i++) {
     std::cout << array[i].surname << " | " << array[i].sid << " | "
               << array[i].test1 << " | " << array[i].test2 << " | "
