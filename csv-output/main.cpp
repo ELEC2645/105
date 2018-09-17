@@ -8,7 +8,7 @@ int main() {
   // create an output file stream
   std::ofstream output;
   // use it to open a file named 'output.txt'
-  output.open("output.txt");
+  output.open("output.csv");
   // check if the file is not open
   if (!output.is_open()) {
     // print error message and quit if a problem occurred
